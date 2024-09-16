@@ -1,0 +1,24 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/vikarm-verma/config-repo  # Replace with your Git repository URL
+          clone-on-start: true  # Optional: Clones the repository on startup for testing
+          default-label: main
+
+logging:
+  level:
+    root: INFO
+eureka: #this one is registering productservice to eureka server
+  client:
+    service-url:
+      #defaultZone: http://localhost:8761/eureka 
+      defaultZone: http://eureka-server:8761/eureka/
+

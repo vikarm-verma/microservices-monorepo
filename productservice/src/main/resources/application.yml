@@ -1,0 +1,33 @@
+server:
+  port: 8072
+
+spring:
+  application:
+    name: productservice
+#  zipkin:
+#    base-url: http://zipkin:9411/
+#  sleuth:
+#    sampler:
+#      probability: 1.0
+
+
+
+eureka: #this one is registering productservice to eureka server
+  client:
+    service-url:
+      #defaultZone: http://localhost:8761/eureka 
+      defaultZone: http://eureka-server:8761/eureka/
+
+#This will responsible to show entries over zipkin
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0  # 100% tracing, adjust as needed
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans #should be according to zipkin container name in docker-compose file, very important we should take care of path here
+
+logging:
+  pattern:
+   level: "%5p[${spring.application.name:},%X{traceId:-},%X{spanId:-}]"

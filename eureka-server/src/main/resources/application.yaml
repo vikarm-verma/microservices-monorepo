@@ -1,0 +1,23 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false #it is  property that prevents the Eureka server from registering itself as a client
+    fetch-registry: false 	#This property indicates that Eureka Server is supported to fetch instance details of microservice to make intra-communication between microservices happen.
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+
+spring:
+ application:
+  name: eureka-server	
+
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health, info
+#  endpoint:
+#    health:
+#      show-details: always
