@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/microservices-monorepo.git'
+                git 'https://github.com/vikarm-verma/microservices-monorepo.git'
             }
         }
         stage('Build and Dockerize eureka-server') {
