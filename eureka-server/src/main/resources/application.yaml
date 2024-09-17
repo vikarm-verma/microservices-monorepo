@@ -13,11 +13,11 @@ spring:
   name: eureka-server	
 
 
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: health, info
-#  endpoint:
-#    health:
-#      show-details: always
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
+  endpoint:
+    health:
+      show-details: always
