@@ -16,7 +16,7 @@ pipeline {
                 dir('eureka-server') {
                     // Build eureka-server
                     bat 'mvn clean package'
-                    bat 'java -jar target/eureka-server.jar'
+                    bat 'java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
 
                     // Build Docker image
                   //  bat 'docker build -t vikdocker6785/eureka-server .'
@@ -30,7 +30,7 @@ pipeline {
             steps {
                 dir('apigateway') {
                     bat 'mvn clean package'
-                    bat 'java -jar target/apigateway.jar'
+                    bat 'java -jar target/apigateway-0.0.1-SNAPSHOT.jar'
                     // bat 'docker build -t vikdocker6785/apigateway .'
                     // bat 'docker push vikdocker6785/apigateway'
                 }
@@ -40,7 +40,7 @@ pipeline {
             steps {
                 dir('springsecurityjwt') {
                     bat 'mvn clean package'
-                     bat 'java -jar target/springsecurityjwt.jar'
+                     bat 'java -jar target/springsecurityjwt-0.0.1-SNAPSHOT.jar'
                     // bat 'docker build -t vikdocker6785/springsecurityjwt .'
                     // bat 'docker push vikdocker6785/springsecurityjwt'
                 }
@@ -50,7 +50,7 @@ pipeline {
             steps {
                 dir('userservice') {
                     bat 'mvn clean package'
-                    bat 'java -jar target/userservice.jar'
+                    bat 'java -jar target/userservice-0.0.1-SNAPSHOT.jar'
                     // bat 'docker build -t vikdocker6785/userservice .'
                     // bat 'docker push vikdocker6785/userservice'
                 }
@@ -60,7 +60,7 @@ pipeline {
             steps {
                 dir('productservice') {
                     bat 'mvn clean package'
-                    bat 'java -jar target/productservice.jar'
+                    bat 'java -jar target/productservice-0.0.1-SNAPSHOT.jar'
                     // bat 'docker build -t vikdocker6785/productservice .'
                     // bat 'docker push vikdocker6785/productservice'
                 }
@@ -70,7 +70,7 @@ pipeline {
             steps {
                 dir('configserver') {
                     bat 'mvn clean package'
-                    bat 'java -jar target/configserver.jar'
+                    bat 'java -jar target/configserver-0.0.1-SNAPSHOT.jar'
                     // bat 'docker build -t vikdocker6785/configserver .'
                     // bat 'docker push vikdocker6785/configserver'
                 }
@@ -80,7 +80,7 @@ pipeline {
             steps {
                 dir('configclient') {
                     bat 'mvn clean package'
-                    bat 'java -jar target/configclient.jar'
+                    bat 'java -jar target/configclient-0.0.1-SNAPSHOT.jar'
                     // bat 'docker build -t vikdocker6785/configclient .'
                     // bat 'docker push vikdocker6785/configclient'
                 }
