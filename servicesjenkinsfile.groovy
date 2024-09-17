@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven 3.9.9' // Use the name of the Maven installation you added
+        maven 'MAVEN_HOME' // Use the name of the Maven installation you added
     }
     stages {
         stage('Checkout') {
