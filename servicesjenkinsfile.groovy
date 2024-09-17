@@ -17,10 +17,10 @@ pipeline {
                     bat 'mvn clean package'
 
                     // Build Docker image
-                    bat 'docker build -t vikdocker6785/eureka-server .'
+                  //  bat 'docker build -t vikdocker6785/eureka-server .'
 
                     // Push Docker image to Docker Hub
-                    bat 'docker push vikdocker6785/eureka-server'
+                   // bat 'docker push vikdocker6785/eureka-server'
                 }
             }
         }
@@ -28,8 +28,8 @@ pipeline {
             steps {
                 dir('apigateway') {
                     bat 'mvn clean package'
-                    bat 'docker build -t vikdocker6785/apigateway .'
-                    bat 'docker push vikdocker6785/apigateway'
+                    // bat 'docker build -t vikdocker6785/apigateway .'
+                    // bat 'docker push vikdocker6785/apigateway'
                 }
             }
         }
@@ -37,8 +37,8 @@ pipeline {
             steps {
                 dir('springsecurityjwt') {
                     bat 'mvn clean package'
-                    bat 'docker build -t vikdocker6785/springsecurityjwt .'
-                    bat 'docker push vikdocker6785/springsecurityjwt'
+                    // bat 'docker build -t vikdocker6785/springsecurityjwt .'
+                    // bat 'docker push vikdocker6785/springsecurityjwt'
                 }
             }
         }
@@ -46,8 +46,8 @@ pipeline {
             steps {
                 dir('userservice') {
                     bat 'mvn clean package'
-                    bat 'docker build -t vikdocker6785/userservice .'
-                    bat 'docker push vikdocker6785/userservice'
+                    // bat 'docker build -t vikdocker6785/userservice .'
+                    // bat 'docker push vikdocker6785/userservice'
                 }
             }
         }
@@ -55,8 +55,8 @@ pipeline {
             steps {
                 dir('productservice') {
                     bat 'mvn clean package'
-                    bat 'docker build -t vikdocker6785/productservice .'
-                    bat 'docker push vikdocker6785/productservice'
+                    // bat 'docker build -t vikdocker6785/productservice .'
+                    // bat 'docker push vikdocker6785/productservice'
                 }
             }
         }
@@ -64,8 +64,8 @@ pipeline {
             steps {
                 dir('configserver') {
                     bat 'mvn clean package'
-                    bat 'docker build -t vikdocker6785/configserver .'
-                    bat 'docker push vikdocker6785/configserver'
+                    // bat 'docker build -t vikdocker6785/configserver .'
+                    // bat 'docker push vikdocker6785/configserver'
                 }
             }
         }
@@ -73,8 +73,8 @@ pipeline {
             steps {
                 dir('configclient') {
                     bat 'mvn clean package'
-                    bat 'docker build -t vikdocker6785/configclient .'
-                    bat 'docker push vikdocker6785/configclient'
+                    // bat 'docker build -t vikdocker6785/configclient .'
+                    // bat 'docker push vikdocker6785/configclient'
                 }
             }
         }
