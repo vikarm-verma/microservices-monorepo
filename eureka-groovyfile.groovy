@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    
    tools {
         maven 'MAVEN_HOME' // Use the name of the Maven installation you added
           //jdk 'JAVA_HOME'
@@ -7,8 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Cloning the Git repository
-               url: 'https://github.com/vikarm-verma/microservices-monorepo.git'
+                git 'https://github.com/vikarm-verma/microservices-monorepo.git'
             }
         }
 
