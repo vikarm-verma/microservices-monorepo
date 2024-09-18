@@ -20,7 +20,7 @@ management:
 eureka: #this one is registering productservice to eureka server
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka 
+      defaultZone: http://localhost:8761/eureka/
       #defaultZone: http://eureka-server:8761/eureka/
 
 logging:
