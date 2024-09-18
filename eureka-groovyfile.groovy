@@ -20,44 +20,44 @@
         echo 'Building eureka-server service...'
         bat 'mvn clean package'
         echo 'Deploying the eureka-server'
-        bat 'start java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
+        bat 'java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
         }
         dir('apigateway') {
         echo 'Building API Gateway service...'
         bat 'mvn clean package'
         echo 'Starting api gateway...'
-        bat 'start java -jar target/apigateway-0.0.1-SNAPSHOT.jar'
+        bat 'java -jar target/apigateway-0.0.1-SNAPSHOT.jar'
         }
         dir('springsecurityjwt') {
         echo 'Building springsecurityjwt service...'
         bat 'mvn clean package'
         echo 'Starting api gateway...'
-        bat 'start java -jar target/apigateway-0.0.1-SNAPSHOT.jar'
+        bat 'java -jar target/apigateway-0.0.1-SNAPSHOT.jar'
         }
         dir('userservice') {
         echo 'Building userservice service...'
         bat 'mvn clean package'
         echo 'Starting userservice...'
-        bat 'start java -jar target/userservice-0.0.1-SNAPSHOT.jar'
+        bat 'java -jar target/userservice-0.0.1-SNAPSHOT.jar'
         }
         dir('productservice') {
         echo 'Building productservice service...'
         bat 'mvn clean package'
         echo 'Starting productservice...'
-        bat 'start java -jar target/productservice-0.0.1-SNAPSHOT.jar'
+        bat 'java -jar target/productservice-0.0.1-SNAPSHOT.jar'
         }
         dir('configserver') {
         echo 'Building configserver service...'
         bat 'mvn clean package'
         echo 'Starting configserver...'
-        bat 'start java -jar target/configserver-0.0.1-SNAPSHOT.jar'
+        bat 'java -jar target/configserver-0.0.1-SNAPSHOT.jar'
         }
         dir('configclient') {
 
         echo 'Building configclient service...'
         bat 'mvn clean package'
         echo 'Starting client...'
-        bat 'start java -jar target/configclient-0.0.1-SNAPSHOT.jar'
+        bat 'java -jar target/configclient-0.0.1-SNAPSHOT.jar'
         }
         }
         }
