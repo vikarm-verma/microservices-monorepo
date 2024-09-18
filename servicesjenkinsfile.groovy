@@ -29,7 +29,7 @@ pipeline {
                 }
             }
         }
-        stage('Build and Dockerize apigateway') {
+        stage('Build apigateway') {
             steps {
                 dir('apigateway') {
                     echo 'Building API Gateway...'
