@@ -19,6 +19,8 @@
                     // Clean and build the Maven project
                     echo 'Building eureka-server service...'
                     bat 'mvn clean package'
+                    echo 'Deploying the eureka-server'
+                    bat 'start java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
                     }
                         dir('apigateway') {
                         echo 'Building API Gateway service...'
@@ -41,6 +43,7 @@
                         bat 'mvn clean package'
                     }
                     dir('configclient') {
+
                         echo 'Building configclient service...'
                         bat 'mvn clean package'
                     }
@@ -50,15 +53,15 @@
 
             stage('Deploy') {
                 steps {
-                    dir('eureka-server')
-                    {
-                    echo 'Deploying the eureka-server'
-                    bat 'start java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
-                    }
+                    // dir('eureka-server')
+                    // {
+                    // echo 'Deploying the eureka-server'
+                    // bat 'start java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
+                    // }
                     dir('apigateway')
                     {
                     echo 'Starting api gateway...'
-                    bat 'start java -jar target/api-gateway-0.0.1-SNAPSHOT.jar'
+                    bat 'start java -jar target/apigateway-0.0.1-SNAPSHOT.jar'
                     }
                     dir('springsecurityjwt')
                     {
