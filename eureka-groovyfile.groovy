@@ -20,7 +20,7 @@
         echo 'Building eureka-server service...'
         bat 'mvn clean package'
         echo 'Deploying the eureka-server'
-        bat 'java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
+        bat 'start java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
         }
         dir('apigateway') {
         echo 'Building API Gateway service...'
