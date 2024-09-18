@@ -90,7 +90,7 @@
 		</dependency>
 
 
-	<!--dependencies for  zipkin server-->
+	<!--dependencies for  zipkin server
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -103,7 +103,7 @@
 		<dependency>
 			<groupId>io.zipkin.reporter2</groupId>
 			<artifactId>zipkin-reporter-brave</artifactId>
-		</dependency>
+		</dependency>-->
 		
 		
 	</dependencies>

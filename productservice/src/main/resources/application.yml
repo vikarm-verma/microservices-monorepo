@@ -19,14 +19,14 @@ eureka: #this one is registering productservice to eureka server
       #defaultZone: http://eureka-server:8761/eureka/
 
 #This will responsible to show entries over zipkin
-management:
-  tracing:
-    enabled: true
-    sampling:
-      probability: 1.0  # 100% tracing, adjust as needed
-  zipkin:
-    tracing:
-      endpoint: http://zipkin:9411/ #should be according to zipkin container name in docker-compose file, very important we should take care of path here
+#management:
+#  tracing:
+#    enabled: true
+#    sampling:
+#      probability: 1.0  # 100% tracing, adjust as needed
+#  zipkin:
+#    tracing:
+#      endpoint: http://zipkin:9411/ #should be according to zipkin container name in docker-compose file, very important we should take care of path here
 
 logging:
   pattern:
