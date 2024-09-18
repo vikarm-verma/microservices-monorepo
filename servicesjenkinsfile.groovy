@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         maven 'MAVEN_HOME' // Use the name of the Maven installation you added
-          jdk 'JAVA_HOME'
+          //jdk 'JAVA_HOME'
     }
     stages {
         stage('Checkout') {
