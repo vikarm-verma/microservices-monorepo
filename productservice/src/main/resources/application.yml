@@ -18,7 +18,7 @@ eureka: #this one is registering productservice to eureka server
       defaultZone: http://localhost:8761/eureka/ 
       #defaultZone: http://eureka-server:8761/eureka/
   instance:
-    hostname: locahost		
+    hostname: localhost		
 
 #This will responsible to show entries over zipkin
 #management:
