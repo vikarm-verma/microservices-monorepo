@@ -5,8 +5,8 @@ spring:
   application:
     name: configclient
   config:
-    import: http://config-server:8888/
-    #import: optional:configserver:http://config-server:8888/
+    #import: http://config-server:8888/
+    import: optional:configserver:http://config-server:8888/
   #cloud:
     #config:
       #uri: http://localhost:8888  # URL of the Config Server
