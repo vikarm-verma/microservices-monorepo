@@ -32,7 +32,7 @@ pipeline {
                 echo 'Deploying the eureka-server'
                 
                 // Here you could start the application, example for running JAR file
-                bat 'java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
+                bat 'start java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
                 }
             }
         }
