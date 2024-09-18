@@ -25,7 +25,7 @@ public class ConfigClientController {
 
     @GetMapping("/info")
     public String getInfo() {
-        return String.format("Environment: %s, Message: %s", environment, message);
+        return String.format(" checking Environment: %s, Message: %s", environment, message);
     }
 
     @GetMapping("/dbinfo")
