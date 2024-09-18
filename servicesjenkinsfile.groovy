@@ -18,7 +18,7 @@ pipeline {
                      echo 'Building Eureka Server...'
                     bat 'mvn clean package'
                     echo 'Starting Eureka Server...'
-                    bat 'java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
+                   // bat 'java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
                     bat 'mvn spring-boot:run &'
 
                     // Build Docker image
@@ -34,7 +34,7 @@ pipeline {
                 dir('apigateway') {
                     echo 'Building API Gateway...'
                     bat 'mvn clean package'
-                    bat 'java -jar target/apigateway-0.0.1-SNAPSHOT.jar'
+               //     bat 'java -jar target/apigateway-0.0.1-SNAPSHOT.jar'
                     bat 'mvn spring-boot:run &'
                     // bat 'docker build -t vikdocker6785/apigateway .'
                     // bat 'docker push vikdocker6785/apigateway'
