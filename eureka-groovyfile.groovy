@@ -19,6 +19,14 @@ pipeline {
                 // Clean and build the Maven project
                 bat 'mvn clean package'
                 }
+                 dir('apigateway') {
+                    echo 'Building API Gateway...'
+                    bat 'mvn clean package'
+               //     bat 'java -jar target/apigateway-0.0.1-SNAPSHOT.jar'
+             
+                    // bat 'docker build -t vikdocker6785/apigateway .'
+                    // bat 'docker push vikdocker6785/apigateway'
+                }
             }
         }
 
@@ -33,6 +41,11 @@ pipeline {
                 
                 // Here you could start the application, example for running JAR file
                 bat 'start java -jar target/eureka-server-0.0.1-SNAPSHOT.jar'
+                }
+                dir('apigateway')
+                {
+                    echo 'Starting api gateway...'
+                    bat 'mvn spring-boot:run &'
                 }
             }
         }
