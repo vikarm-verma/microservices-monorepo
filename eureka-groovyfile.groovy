@@ -39,10 +39,10 @@ pipeline {
     }
 
     post {
-        always {
-            // Clean up workspace after pipeline execution
-            cleanWs()
-        }
+        // always {
+        //     // Clean up workspace after pipeline execution
+        //     cleanWs()
+        // }
         success {
             echo 'Pipeline completed successfully!'
         }
